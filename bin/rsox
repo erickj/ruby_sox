@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+require 'optparse'
+require 'ostruct'
+
+if ARGV.length == 0 || ARGV.include?("help")
+  puts "Usage: rsox <action>"
+
+  puts "\nActions:"
+  puts "\t help"
+  puts "\t convert <input1> [<inputN>...] to <output> [<effect> [<effectN>...]]"
+  puts "\t info <input1>"
+
+  puts ""
+  puts "See `man sox` for more information"
+  exit 1
+end
