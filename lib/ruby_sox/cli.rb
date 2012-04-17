@@ -30,11 +30,13 @@ module RubySox
       output = File.join(dir, base_without_ext_from_file(input_file) << "." << effect.name << ext)
 
       RubySox.exec_no_capture input_file, output, effect
+      exit $?.exitstatus if $?.exitstatus > 0
     end
 
     desc "info <input>", "returns sox info for the <input> file"
     def info(*args)
       RubySox.exec_no_capture ["--info"].concat(args)
+      exit $?.exitstatus if $?.exitstatus > 0
     end
 
     private

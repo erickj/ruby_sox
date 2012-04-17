@@ -18,6 +18,10 @@ Feature: RSox
     Then the stdout should contain "mp3"
     Then the exit status should be 0
 
+  Scenario: info is invalid
+    When I run `rsox info bad.data.mp3`
+    Then the exit status should be 1
+
   @slow_process
   Scenario: convert file format
     Given a copy of test data named "test.mp3"
