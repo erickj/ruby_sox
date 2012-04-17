@@ -3,7 +3,7 @@ require File.expand_path('../lib/ruby_sox/version', __FILE__)
 
 Gem::Specification.new do |gem|
   gem.authors       = ["Erick Johnson"]
-  gem.email         = ["erick@junctionnetworks.com"]
+  gem.email         = ["ejohnson82@gmail.com"]
   gem.description   = %q{TODO: Write a gem description}
   gem.summary       = %q{TODO: Write a gem summary}
   gem.homepage      = ""
@@ -14,4 +14,6 @@ Gem::Specification.new do |gem|
   gem.name          = "ruby_sox"
   gem.require_paths = ["lib"]
   gem.version       = RubySox::VERSION
+
+  gem.add_development_dependency "rspec", "~>2.9"
 end
