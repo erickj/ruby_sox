@@ -16,4 +16,7 @@ Gem::Specification.new do |gem|
   gem.version       = RubySox::VERSION
 
   gem.add_development_dependency "rspec", "~>2.9"
+
+  gem.add_development_dependency "cucumber"
+  gem.add_development_dependency "aruba"
 end
