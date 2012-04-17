@@ -3,18 +3,18 @@ require 'fileutils'
 
 module RubySox
   class CLI < Thor
-    desc "convert <input> <output_format>", "performs encoding conversion from input to output_format"
-    def convert(input_file, output)
+    desc "convert <input> <output_format> [norm]", "performs encoding conversion from input to output_format"
+    def convert(input_file, output, norm=-2)
       unless File.exists?(input_file)
         throw Errno::ENOENT.new("no such file %s in %s"%[input_file, FileUtils.pwd])
       end
 
       if RubySox.is_file_format?(output)
         dir = dirname_from_file(input_file)
-        output = File.join(dir, base_without_ext_from_file(input) << "." << output)
+        output = File.join(dir, base_without_ext_from_file(input_file) << "." << output)
       end
 
-      RubySox.exec_capture input_file, output
+      RubySox.exec_no_capture "--norm=%d"%norm, input_file, output
     end
 
     desc "info <input>", "returns sox info for the <input> file"

@@ -18,9 +18,9 @@ Feature: RSox
     Then the stdout should contain "mp3"
     Then the exit status should be 0
 
+  @slow_process
   Scenario: convert file format
     Given a copy of test data named "test.mp3"
-    When I run `rsox convert tmp/aruba/test.mp3 wav`
-    Then the output should contain "tmp/aruba/test.wav created"
-    Then a file named "tmp/aruba/test.wav" should exist
+    When I run `rsox convert test.mp3 wav`
+    Then a file named "test.wav" should exist
     Then the exit status should be 0

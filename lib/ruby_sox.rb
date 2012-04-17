@@ -4,7 +4,7 @@ require "ruby_sox/constants"
 
 module RubySox
   include RubySox::Constants
-  SOX_EXEC = '/usr/local/bin/sox'
+  SOX_EXEC = ENV['SOX_EXEC'] || '/usr/local/bin/sox'
 
   def self.is_file_format?(format)
     self.const_defined?("AF_%s"%format.upcase)
