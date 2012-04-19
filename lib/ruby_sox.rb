@@ -14,11 +14,11 @@ module RubySox
   end
 
   def self.is_file_format?(format)
-    self.const_defined?("AF_%s"%format.upcase)
+    self.const_defined?("AF_%s"%format.to_s.upcase)
   end
 
   def self.is_effect?(effect)
-    self.const_defined?("EF_%s"%effect.upcase)
+    self.const_defined?("EF_%s"%effect.to_s.upcase)
   end
 
   def self.exec_capture(*args)

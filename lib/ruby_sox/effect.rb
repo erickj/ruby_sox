@@ -10,7 +10,7 @@ module RubySox
     end
 
     def initialize(name, options)
-      throw InvalidEffectException.new(name) unless RubySox.is_effect?(name)
+      throw InvalidEffectException.new("Invalid Effect: %s"%name) unless RubySox.is_effect?(name)
       @name = name
       @options = options
     end
