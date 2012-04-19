@@ -18,6 +18,8 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "rspec", "~>2.9"
   gem.add_development_dependency "cucumber"
   gem.add_development_dependency "aruba"
+  gem.add_development_dependency "guard"
+  gem.add_development_dependency "guard-rspec"
 
   gem.add_dependency "thor"
 end
