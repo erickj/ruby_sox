@@ -1,4 +1,4 @@
-require "spec/spec_helper"
+require "spec_helper"
 
 describe RubySox::Effect do
   it "throws invalid ruby exception for bogus effects" do
@@ -7,7 +7,7 @@ describe RubySox::Effect do
 
   it "parses itself from an effect string" do
     e = RubySox::Effect.parse("reverse")
-    e.name.should equal("reverse")
+    e.name.should eq("reverse")
   end
 
   context "valid effect" do

@@ -1,4 +1,4 @@
-require "spec/spec_helper"
+require "spec_helper"
 
 describe RubySox::Effect do
   it "should respond to effect is_effect?" do
