@@ -4,12 +4,13 @@ require File.expand_path('../lib/ruby_sox/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Erick Johnson"]
   gem.email         = ["ejohnson82@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = "RubySox provides a ruby wrapper around Sox (Sound Exchange)"
+  gem.summary       = "RubySox lets you manipulate music files"
+  gem.homepage      = "http://github.com/eejjjj82/ruby_sox"
 
   gem.add_dependency "thor"
 
+  gem.add_development_dependency "bundler"
   gem.add_development_dependency "rspec", "~>2.9"
   gem.add_development_dependency "cucumber"
   gem.add_development_dependency "aruba"
