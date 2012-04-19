@@ -1,4 +1,4 @@
-require "ruby_sox"
+require "spec/spec_helper"
 
 describe RubySox::FileName do
   context "is a regular file" do
