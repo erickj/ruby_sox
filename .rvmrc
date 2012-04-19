@@ -1,1 +1,3 @@
-rvm use 1.9.2@ruby-sox
+rvm_gemset_create_on_use_flag=1
+rvm gemset use ruby_sox
+
